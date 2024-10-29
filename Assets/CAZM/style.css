@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.shop{
+    background: url('https://png.pngtree.com/background/20220726/original/pngtree-tropical-green-leaf-background-picture-image_1788973.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    height: 40vh;
+}
+
+#search{
+    outline: none;
+}
+
+.filter{
+    font-size: 12px;
+}
+
+.slider-container {
+    width: 100%;
+    margin-top: 10px;
+}
+.slider-labels {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.875rem;
+}
+
+.product-card {
+    overflow: hidden; /* Ensures that the hover effects are contained */
+    position: relative;
+  }
+  
+  .product-card .transition {
+    transition: transform 0.3s ease; /* Adds smooth transition for image */
+  }
+  
+  .product-card:hover .card-img-top {
+    transform: scale(1.1); /* Zoom effect on image hover */
+  }
+  
+  .icon-container {
+    transition: transform 0.4s ease, opacity 0.4s ease; /* Adds transition effects for icons */
+    transform: translateX(100%); /* Move icons off-screen to the right initially */
+    opacity: 0; /* Make icons invisible initially */
+  }
+  
+  .product-card:hover .icon-container {
+    transform: translateX(0); /* Slide in icons on hover */
+    opacity: 1; /* Fade in icons on hover */
+  }
+  
+  .icon {
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transition for individual icons */
+  }
+  
+  .badge {
+    z-index: 1; /* Ensures the discount tag is above the image */
+    font-size: 0.75rem;
+    padding: 5px 8px;
+  }
+
+   /* Responsive styles */
+   @media (min-width: 768px) {
+    .collapse-custom {
+        display: block !important; /* Always display on tablets and larger screens */
+    }
+}
+
+.product-detail{
+  font-size: 14px;
+}

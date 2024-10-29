@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8672e0d49a.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/no-ui-slider@15.6.0/distribute/nouislider.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container-fliud">
+        <div class="row d-flex shop flex-row justify-content-center align-items-center py-5 text-center">
+            <h1 class="  fw-bolder fs-1"><i class="fa-solid fa-cart-shopping"></i> Shopping Cart</h1>
+        </div>
+    </div>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col col-12 col-md-9">
+                <div class="cart-wrapper">
+                    <!-- Cart-Card -->
+                    <div class="card mb-3 rounded-5 border-0 shadow">
+                        <div class="row g-1">
+                            <div class="col col-4">
+                                <img src="https://via.placeholder.com/300x300"
+                                    class="img-fluid h-100 rounded-top-5 rounded-bottom-5" alt="...">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text"><small class="text-body-secondary">Specie</small></p>
+                                    <p class="card-text"><small class="text-body-secondary">This is a wider card with
+                                            supporting text below as a natural lead-in to additional content. This
+                                            content
+                                            is a little bit longer.</small></p>
+                                    <div class="input-group py-1 pb-3 w-50">
+                                        <button class="btn btn-outline-secondary rounded-0" type="button"
+                                            id="decrement">-</button>
+                                        <input type="number" id="quantity" class="form-control text-center w-25" min="1"
+                                            max="100" value="1">
+                                        <button class="btn btn-outline-secondary rounded-0" type="button"
+                                            id="increment">+</button>
+                                        <script>
+                                            document.getElementById('increment').addEventListener('click', function () {
+                                                let input = document.getElementById('quantity');
+                                                if (parseInt(input.value) < parseInt(input.max)) {
+                                                    input.value = parseInt(input.value) + 1;
+                                                }
+                                            });
+
+                                            document.getElementById('decrement').addEventListener('click', function () {
+                                                let input = document.getElementById('quantity');
+                                                if (parseInt(input.value) > parseInt(input.min)) {
+                                                    input.value = parseInt(input.value) - 1;
+                                                }
+                                            });
+                                        </script>
+
+                                    </div>
+                                    <p class="card-text d-flex justify-content-between">
+                                        <span class="fs-4">$12.00</span>
+                                        <button type="button" class="btn btn-danger btn-sm"><i
+                                                class="fa-solid fa-trash"></i></button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col d-flex justifu-content-center align-items-center gap-1 fw-bold text-success my-3"
+                        role="button">
+                        <i class="fa-solid fa-arrow-left"></i>Continue Shopping
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 col-md-3">
+                <!-- Total -->
+                <div class="card rounded-5 border-0 shadow">
+                    <div class="card-body p-4">
+                        <div class="card-title fs-4 fw-bolder border-bottom pb-2">
+                            Cart Summary
+                        </div>
+                        <ol class="list-group list-group-numbered d-flex flex-column gap-2 py-2">
+                            <li class="list-group-item d-flex justify-content-between border-0">Product 1<span>$12.00</span></li>
+                            <li class="list-group-item d-flex justify-content-between  border-0">Product 1<span>$12.00</span></li>
+                            <li class="list-group-item d-flex justify-content-between  border-0">Product 1<span>$12.00</span></li>
+                        </ol>
+                        <div class="card-text d-flex justify-content-between border-top fw-semibold py-2">Sub-Total <span>$36.00</span></div>
+                        <div class="card-text d-flex justify-content-between  border-top fw-bold py-2">Total <span>$66.00</span></div>
+                        <button class="btn btn-success w-100 rounded-pill my-1">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
